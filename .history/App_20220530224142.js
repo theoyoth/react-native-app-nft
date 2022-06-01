@@ -18,17 +18,10 @@ const theme = {
 };
 
 export default function App() {
-  const [loaded] = useFonts({
-    InterBold: require("./assets/fonts/Inter-Bold.ttf"),
-    InterSemiBold: require("./assets/fonts/Inter-SemiBold.ttf"),
-    InterMedium: require("./assets/fonts/Inter-Medium.ttf"),
-    InterLight: require("./assets/fonts/Inter-Light.ttf"),
-  });
-  if (!loaded) return null;
   return (
     <NavigationContainer theme={theme}>
       <Stack.Navigator
-        screenOptions={{ headerShown: false }}
+        screenOptions={{ headerShown: true }}
         initialRouteName="Home"
       >
         <Stack.Screen name="Home" component={Home} />
@@ -37,3 +30,12 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});

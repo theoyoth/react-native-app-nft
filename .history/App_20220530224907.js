@@ -24,7 +24,6 @@ export default function App() {
     InterMedium: require("./assets/fonts/Inter-Medium.ttf"),
     InterLight: require("./assets/fonts/Inter-Light.ttf"),
   });
-  if (!loaded) return null;
   return (
     <NavigationContainer theme={theme}>
       <Stack.Navigator
