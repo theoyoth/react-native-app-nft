@@ -9,14 +9,7 @@ import {
 
 import { COLORS, SIZES, FONTS, SHADOWS, assets } from "../constants";
 
-import {
-  CircleButton,
-  RectButton,
-  SubInfo,
-  FocusedStatusBar,
-  DetailsDesc,
-  DetailsBid,
-} from "../components";
+import { CircleButton, RectButton, SubInfo } from "../components";
 
 function Details() {
   return (
