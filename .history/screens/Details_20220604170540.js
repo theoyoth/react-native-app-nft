@@ -46,7 +46,7 @@ function Details({ route, navigation }) {
     <SafeAreaView style={{ flex: 1 }}>
       <FocusedStatusBar
         barStyle="dark content"
-        backgroundColor="transparent"
+        backgroundColor="transparant"
         translucent={true}
       />
       <View
@@ -76,15 +76,7 @@ function Details({ route, navigation }) {
             <View style={{ padding: SIZES.font }}>
               <DetailsDesc data={data} />
               {data.bids.length > 0 && (
-                <Text
-                  style={{
-                    fontSize: SIZES.font,
-                    fontFamily: FONTS.semiBold,
-                    color: COLORS.primary,
-                  }}
-                >
-                  Current Bids
-                </Text>
+                <Text style={{ fontSize: SIZES.font }}>as</Text>
               )}
             </View>
           </React.Fragment>

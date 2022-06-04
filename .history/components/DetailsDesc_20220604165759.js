@@ -54,10 +54,10 @@ const DetailsDesc = ({ data }) => {
               }}
               onPress={() => {
                 if (readMore) {
-                  setText(data.description);
+                  setText(data.description.slice(0, 100));
                   setReadMore(false);
                 } else {
-                  setText(data.description.slice(0, 100));
+                  setText(data.description);
                   setReadMore(true);
                 }
               }}

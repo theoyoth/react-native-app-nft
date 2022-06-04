@@ -6,7 +6,7 @@ import { COLORS, SIZES, FONTS } from "../constants";
 
 const DetailsDesc = ({ data }) => {
   const [text, setText] = useState(data.description.slice(0, 100));
-  const [readMore, setReadMore] = useState(true);
+  const [readMore, setReadMore] = useState(false);
   return (
     <>
       <View
@@ -45,7 +45,7 @@ const DetailsDesc = ({ data }) => {
             }}
           >
             {text}
-            {readMore && "..."}
+            {!readMore && "..."}
             <Text
               style={{
                 fontFamily: FONTS.semiBold,
@@ -53,16 +53,12 @@ const DetailsDesc = ({ data }) => {
                 color: COLORS.primary,
               }}
               onPress={() => {
-                if (readMore) {
+                if (!readMore) {
                   setText(data.description);
-                  setReadMore(false);
-                } else {
-                  setText(data.description.slice(0, 100));
-                  setReadMore(true);
                 }
               }}
             >
-              {readMore ? "read more" : "show less"}
+              {readMore ? "show less" : "read more"}
             </Text>
           </Text>
         </View>

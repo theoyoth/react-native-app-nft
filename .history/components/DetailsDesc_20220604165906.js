@@ -5,7 +5,7 @@ import { EthPrice, NFTTitle } from "./SubInfo";
 import { COLORS, SIZES, FONTS } from "../constants";
 
 const DetailsDesc = ({ data }) => {
-  const [text, setText] = useState(data.description.slice(0, 100));
+  const [text, setText] = useState(data.description);
   const [readMore, setReadMore] = useState(true);
   return (
     <>
@@ -54,10 +54,10 @@ const DetailsDesc = ({ data }) => {
               }}
               onPress={() => {
                 if (readMore) {
-                  setText(data.description);
+                  setText(data.description.slice(0, 100));
                   setReadMore(false);
                 } else {
-                  setText(data.description.slice(0, 100));
+                  setText(data.description);
                   setReadMore(true);
                 }
               }}

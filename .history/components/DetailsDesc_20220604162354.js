@@ -5,8 +5,6 @@ import { EthPrice, NFTTitle } from "./SubInfo";
 import { COLORS, SIZES, FONTS } from "../constants";
 
 const DetailsDesc = ({ data }) => {
-  const [text, setText] = useState(data.description.slice(0, 100));
-  const [readMore, setReadMore] = useState(true);
   return (
     <>
       <View
@@ -36,35 +34,7 @@ const DetailsDesc = ({ data }) => {
           Description
         </Text>
         <View style={{ marginTop: SIZES.base }}>
-          <Text
-            style={{
-              fontSize: SIZES.small,
-              fontFamily: FONTS.regular,
-              color: COLORS.secondary,
-              lineHeight: SIZES.large,
-            }}
-          >
-            {text}
-            {readMore && "..."}
-            <Text
-              style={{
-                fontFamily: FONTS.semiBold,
-                fontSize: SIZES.small,
-                color: COLORS.primary,
-              }}
-              onPress={() => {
-                if (readMore) {
-                  setText(data.description);
-                  setReadMore(false);
-                } else {
-                  setText(data.description.slice(0, 100));
-                  setReadMore(true);
-                }
-              }}
-            >
-              {readMore ? "read more" : "show less"}
-            </Text>
-          </Text>
+          <Text>dfa</Text>
         </View>
       </View>
     </>

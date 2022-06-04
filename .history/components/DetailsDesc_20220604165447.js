@@ -53,12 +53,12 @@ const DetailsDesc = ({ data }) => {
                 color: COLORS.primary,
               }}
               onPress={() => {
-                if (readMore) {
+                if (!readMore) {
                   setText(data.description);
-                  setReadMore(false);
+                  setReadMore(true);
                 } else {
                   setText(data.description.slice(0, 100));
-                  setReadMore(true);
+                  setReadMore(false);
                 }
               }}
             >

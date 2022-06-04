@@ -46,7 +46,7 @@ function Details({ route, navigation }) {
     <SafeAreaView style={{ flex: 1 }}>
       <FocusedStatusBar
         barStyle="dark content"
-        backgroundColor="transparent"
+        backgroundColor="black"
         translucent={true}
       />
       <View

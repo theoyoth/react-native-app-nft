@@ -13,11 +13,6 @@ function Home() {
     const filteredSearch = NFTData.filter((item) =>
       item.name.toLowerCase().includes(value.toLowerCase())
     );
-    if (filteredSearch.length) {
-      setNftData(filteredSearch);
-    } else {
-      setNftData(NFTData);
-    }
   };
 
   return (
@@ -27,11 +22,11 @@ function Home() {
       <View style={{ flex: 1 }}>
         <View style={{ zIndex: 0 }}>
           <FlatList
-            data={nftData}
+            data={NFTData}
             renderItem={({ item }) => <NFTCard data={item} />}
             keyExtractor={(item) => item.id}
             showsVerticalScrollIndicator={false}
-            ListHeaderComponent={<HomeHeader onSearch={handleSearch} />}
+            ListHeaderComponent={<HomeHeader />}
           />
         </View>
         <View

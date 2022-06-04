@@ -46,7 +46,7 @@ function Details({ route, navigation }) {
     <SafeAreaView style={{ flex: 1 }}>
       <FocusedStatusBar
         barStyle="dark content"
-        backgroundColor="transparent"
+        backgroundColor="transparant"
         translucent={true}
       />
       <View
@@ -83,7 +83,7 @@ function Details({ route, navigation }) {
                     color: COLORS.primary,
                   }}
                 >
-                  Current Bids
+                  as
                 </Text>
               )}
             </View>

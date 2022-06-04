@@ -5,16 +5,7 @@ import { COLORS, SIZES, FONTS } from "../constants";
 
 const DetailsBid = ({ bid }) => {
   return (
-    <View
-      style={{
-        width: "100%",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-        marginVertical: SIZES.base,
-        paddingHorizontal: SIZES.base * 2,
-      }}
-    >
+    <View>
       <Image
         source={bid.image}
         resizeMode="contain"
@@ -41,7 +32,6 @@ const DetailsBid = ({ bid }) => {
           {bid.date}
         </Text>
       </View>
-      <EthPrice price={bid.price} />
     </View>
   );
 };
